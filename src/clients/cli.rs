@@ -102,7 +102,7 @@ impl Cli {
             for port in &ports {
                 command
                     .arg("-p")
-                    .arg(format!("{}:{}", port.local, port.internal));
+                    .arg(format!("localhost:{}:{}", port.local, port.internal));
             }
         } else {
             command.arg("-P"); // expose all ports
